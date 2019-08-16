@@ -13,6 +13,7 @@ const appRoutes: Routes = [
   {path: '', component: LandingPageComponent },
   {path: 'select-process', component: SelectProcessComponent },
   {path: 'upload-document', component: UploadDocumentComponent },
+  {path: 'upload-document/:acctId', component: UploadDocumentComponent },
   {path: 'review-information', component: ReviewInformationComponent },
   {path: 'print-document', component: PrintDocumentComponent }
 ];

@@ -1,9 +1,11 @@
 export interface Customer {
-    acctId: string;
-    actName: string;
-    complete: string;
-    lstAccessed: string;
-    name: string;
-    url: string;
+    acctId?: string;
+    actName?: string;
+    acctType?: string;
+    complete?: string;
+    lstAccessed?: string;
+    name?: string;
+    custName?: string;
+    url?: string;
     id?:string;
 }

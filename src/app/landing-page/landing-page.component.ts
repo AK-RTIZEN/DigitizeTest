@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
+import { Router } from '@angular/router';
 
 import { map } from 'rxjs/operators';
 
@@ -15,7 +16,7 @@ export class LandingPageComponent implements OnInit {
   loadedCustomers : Customer[] = [];
   recentCustomers : Customer[] = [];
 
-  constructor(private http : HttpClient) { }
+  constructor(private http : HttpClient, private router : Router) { }
 
 
   ngOnInit() {
@@ -38,7 +39,7 @@ export class LandingPageComponent implements OnInit {
             }
           }
         }
-        console.log(response);
+        //console.log(response);
         return response;
       })
       )
@@ -50,8 +51,8 @@ export class LandingPageComponent implements OnInit {
 
   }
 
-  searchApplicant(postData: { acctId : string }) {
-    console.log(postData);
+  searchApplicant(postData: { cstName : string }) {
+    //console.log(postData);
     this.http
     .post(
       //'https://account-dot-digitize.appspot.com/startNewCurrent',
@@ -80,6 +81,11 @@ export class LandingPageComponent implements OnInit {
           this.loadedCustomers = customers;
         }
       );
+  }
+
+  onClickCustomer(acctId : string) {
+    //console.log(acctId);
+    this.router.navigate(['/upload-document', acctId]);
   }
 
 

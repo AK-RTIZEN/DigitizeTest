@@ -41,8 +41,8 @@ export class SelectProcessComponent implements OnInit {
       })
       )
       .subscribe(
-        customers => {
-          this.loadedProcess = customers;
+        process => {
+          this.loadedProcess = process;
         }
       );
 
