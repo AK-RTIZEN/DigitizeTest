@@ -49,7 +49,11 @@
             <ng-container *ngFor="let customer of loadedCustomerDetails">
             <p class="lead" style="color:#889F60; padding-left:40px; font-size:14px" align="left"><strong>{{customer.acctType}}   >  {{customer.custName}}</strong></p>
             </ng-container>
-
+            <ng-container *ngIf="errorRes2">
+              <div>
+                <p style="color: #000;">{{ errorRes2 }}</p>
+              </div>
+            </ng-container>
             <ng-container *ngIf="loadedDocumentsDetails.length >= 1" >
                 <ng-container *ngFor="let documents of loadedDocumentsDetails">
             

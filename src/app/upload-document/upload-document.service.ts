@@ -31,7 +31,8 @@ export class UploadDocumentService {
     loadDocumentDetails(postData: {acctId : string}) {
         return this.http
         .post(
-        'http://localhost/api/d.php',
+        'https://account-dot-digitize.appspot.com/onClickCstName',
+        //'http://localhost/api/d.php',
         postData,
         {
             headers: new HttpHeaders({ 'Content-Type' : 'application/json' })

@@ -15,6 +15,8 @@ export class UploadDocumentComponent implements OnInit {
 
   loadedDocumentsDetails : Document[] = [];
   loadedCustomerDetails : Customer[] = [];
+  errorRes1 = null;
+  errorRes2 = null;
 
   constructor(private uploadDocumentService : UploadDocumentService, private route : ActivatedRoute) { }
 
@@ -30,6 +32,9 @@ export class UploadDocumentComponent implements OnInit {
       .subscribe(
         documents => {
           this.loadedCustomerDetails = documents;
+        },
+        error => {
+          this.errorRes1 = error.name;
         }
       );
   }
@@ -39,6 +44,9 @@ export class UploadDocumentComponent implements OnInit {
     .subscribe(
         documents => {
           this.loadedDocumentsDetails = documents;
+        },
+        error => {
+          this.errorRes2 = error.name;
         }
       );
   }

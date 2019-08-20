@@ -45,22 +45,27 @@
   <span class="dot notdone"></span>
 </div>
             
-            
+            <ng-container *ngIf="errorRes">
+              <div>
+                <p style="color: #000;">
+                  {{errorRes}}
+                </p>
+              </div>
+            </ng-container>
             <div align="center" class="">
-            
-            <ng-container >
+            <ng-container *ngIf="loadedProcess.length >= 1">
             <table  border="0" width="80%">
                 <tr><td style="padding-left:2px;padding-right:10px; padding-bottom:20px;">
-            <a href="/upload-document" class="btn btn-lg btn-secondary" style="width:130px; background-color:#0076BA; color:#FFF; font-stretch:normal; font-weight:400; height:130px; padding-top:25px; border-radius:0px; font-size:16px; text-align:center">NEW CURRENT ACCOUNT</a>
+            <a href="/upload-document" class="btn btn-lg btn-secondary" style="width:130px; background-color:#0076BA; color:#FFF; font-stretch:normal; font-weight:400; height:130px; padding-top:25px; border-radius:0px; font-size:16px; text-align:center">{{loadedProcess[0].name}}</a>
              </td>
              <td style="padding-left:10px;padding-right:2px; float:right">
-            <a href="/upload-document" class="btn btn-lg btn-secondary" style="width:130px; background-color:#0076BA; color:#FFF; font-stretch:normal; font-weight:400; height:130px; padding-top:25px; border-radius:0px; font-size:16px; text-align:center">NEW SAVINGS ACCOUNT</a>
+            <a href="/upload-document" class="btn btn-lg btn-secondary" style="width:130px; background-color:#0076BA; color:#FFF; font-stretch:normal; font-weight:400; height:130px; padding-top:25px; border-radius:0px; font-size:16px; text-align:center">{{loadedProcess[1].name}}</a>
              </td></tr>
              <tr><td style="padding-left:2px;padding-right:10px">
-            <a href="/upload-document" class="btn btn-lg btn-secondary" style="width:130px; background-color:#0076BA; color:#FFF; font-stretch:normal; font-weight:400; height:130px; padding-top:25px; border-radius:0px; font-size:16px; text-align:center">NEW  HOME LOAN APPLICATION</a>
+            <a href="/upload-document" class="btn btn-lg btn-secondary" style="width:130px; background-color:#0076BA; color:#FFF; font-stretch:normal; font-weight:400; height:130px; padding-top:25px; border-radius:0px; font-size:16px; text-align:center">{{loadedProcess[2].name}}</a>
              </td>
              <td style="padding-left:10px;padding-right:2px; float:right">
-            <a href="/upload-document" class="btn btn-lg btn-secondary" style="width:130px; background-color:#0076BA; color:#FFF; font-stretch:normal; font-weight:400; height:130px; padding-top:25px; border-radius:0px; font-size:16px; text-align:center">NEW AUTO LOAN APPLICATION</a>
+            <a href="/upload-document" class="btn btn-lg btn-secondary" style="width:130px; background-color:#0076BA; color:#FFF; font-stretch:normal; font-weight:400; height:130px; padding-top:25px; border-radius:0px; font-size:16px; text-align:center">{{loadedProcess[3].name}}</a>
              </td></tr></table>
             </ng-container> 
              

@@ -13,6 +13,8 @@ export class LandingPageComponent implements OnInit {
 
   loadedCustomers : Customer[] = [];
   recentCustomers : Customer[] = [];
+  errorRes1 = null;
+  errorRes2 = null;
 
   constructor(private router : Router, private landingService : LandingService ) { }
 
@@ -21,6 +23,10 @@ export class LandingPageComponent implements OnInit {
     .subscribe(
         customers => {
           this.recentCustomers = customers;
+        }, 
+        error => {
+          this.errorRes1 = error.name;
+          //console.log(error);
         }
       );
   }
@@ -30,6 +36,10 @@ export class LandingPageComponent implements OnInit {
     .subscribe(
         customers => {
         this.loadedCustomers = customers;
+        },
+        error => {
+          this.errorRes2 = error.name;
+          //console.log(error);
         }
     );
   }
@@ -37,8 +47,6 @@ export class LandingPageComponent implements OnInit {
   onClickCustomer(acctId : string) {
     this.router.navigate(['/upload-document', acctId]);
   }
-
-
-  
+ 
 
 }

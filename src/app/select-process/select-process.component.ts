@@ -12,6 +12,7 @@ import { SelectProcessService } from './select-process.service'
 export class SelectProcessComponent implements OnInit {
 
   loadedProcess : Process[] = [];
+  errorRes = null;
 
   constructor(private selectProcessService : SelectProcessService) { }
 
@@ -20,6 +21,10 @@ export class SelectProcessComponent implements OnInit {
     .subscribe(
         process => {
           this.loadedProcess = process;
+        },
+        error => {
+          this.errorRes = error.name;
+          console.log(this.errorRes);
         }
       );
 

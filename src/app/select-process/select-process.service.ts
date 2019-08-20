@@ -12,6 +12,7 @@ export class SelectProcessService {
     fetchProcess() {
         return this.http
         .get(
+        //'https://relmgr-dot-digitize.appspot.com/startNewApp',
         'http://localhost/api/c.php',
         {
             headers: new HttpHeaders({ 'Content-Type' : 'application/json' })

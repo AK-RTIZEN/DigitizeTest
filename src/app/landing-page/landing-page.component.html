@@ -67,6 +67,11 @@
                 <td colspan="4" style="text-align: center">NO DATA AVAILABLE</td>
                 </tr>
                 </ng-container>
+                <ng-container *ngIf="errorRes2" >
+                  <tr align="left"> 
+                  <td colspan="4" style="text-align: center">{{ errorRes2 }}</td>
+                  </tr>
+                </ng-container>
                 <ng-container *ngIf="loadedCustomers.length >= 1" >
                 <ng-container *ngFor="let customers of loadedCustomers">
                 
@@ -92,6 +97,11 @@
                 <tr align="left"> 
                 <td colspan="4" style="text-align: center">NO DATA AVAILABLE</td>
                 </tr>
+                </ng-container>
+                <ng-container *ngIf="errorRes1" >
+                  <tr align="left"> 
+                  <td colspan="4" style="text-align: center">{{ errorRes1 }}</td>
+                  </tr>
                 </ng-container>
                 <ng-container *ngIf="recentCustomers.length >= 1" >
                 <ng-container *ngFor="let details of recentCustomers">

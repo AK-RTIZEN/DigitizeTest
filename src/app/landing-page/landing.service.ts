@@ -31,7 +31,7 @@ export class LandingService {
                 }
             }
             }
-            console.log(response);
+            //console.log(response);
             return response;
         })
         );
@@ -40,7 +40,7 @@ export class LandingService {
     recentApplicant() {
         return this.http
         .get(
-        //'https://account-dot-digitize.appspot.com/startNewCurrent',
+        //'https://relmgr-dot-digitize.appspot.com/onLoad',
         'http://localhost/api/b.php',
         //'http://mediartizen.com/api/a.php',
         {
