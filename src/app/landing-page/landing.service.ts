@@ -40,9 +40,7 @@ export class LandingService {
     recentApplicant() {
         return this.http
         .get(
-        //'https://relmgr-dot-digitize.appspot.com/onLoad',
         'http://localhost/api/b.php',
-        //'http://mediartizen.com/api/a.php',
         {
             headers: new HttpHeaders({ 'Content-Type' : 'application/json' })
         }

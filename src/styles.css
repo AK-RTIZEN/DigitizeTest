@@ -195,6 +195,7 @@ body {
     width: 40px;
     background-color: #bbb;
     border-radius: 50%;
+    z-index: 1;
     display: inline-block;
       
   }

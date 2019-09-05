@@ -7,7 +7,7 @@ import { Document } from '../document.model';
 import { Customer } from '../customer.model';
 
 @Injectable({providedIn: 'root'})
-export class UploadDocumentService {
+export class ReviewInformationService {
 
     constructor(private http : HttpClient) {}
 
@@ -15,12 +15,9 @@ export class UploadDocumentService {
 
     loadDocuments(postData: {acctId : string}){
         
-        if(postData.acctId != null) {
-            this.api = 'http://localhost/api/d.php';
-        }
-        else {
-            this.api = 'http://localhost/api/e.php';
-        }
+        
+        this.api = 'http://localhost/api/g.php';
+        
         return this.http
         .post(
         this.api,
@@ -38,12 +35,9 @@ export class UploadDocumentService {
     }
 
     loadDocumentDetails(postData: {acctId : string}) {
-        if(postData.acctId != null) {
-            this.api = 'http://localhost/api/d.php';
-        }
-        else {
-            this.api = 'http://localhost/api/e.php';
-        }
+        
+        this.api = 'http://localhost/api/g.php';
+        
         return this.http
         .post(
         this.api,
@@ -55,11 +49,13 @@ export class UploadDocumentService {
         .pipe(map((responseData :  Document  ) => {
             const response : Document[] = [];
             for( const obj in responseData) {
-            if(responseData.hasOwnProperty(obj)) {
-                for(const x in responseData[obj]["details"]){
-                response.push(responseData[obj]["details"][x])
+                if(responseData.hasOwnProperty(obj)) {
+                    for(const x in responseData[obj]["details"]){
+                        for(const i in responseData[obj]["details"][x]) {
+                            response.push(responseData[obj]["details"][x][i])
+                        }
+                    }
                 }
-            }
             }
             
             return response;
