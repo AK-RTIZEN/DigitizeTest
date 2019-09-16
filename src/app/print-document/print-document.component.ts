@@ -57,7 +57,7 @@ export class PrintDocumentComponent implements OnInit {
   }
 
   onClickBack(acctId) {
-    //console.log(acctId);
+    console.log(acctId);
     this.router.navigate(['/review-information', acctId]);
   }
 
