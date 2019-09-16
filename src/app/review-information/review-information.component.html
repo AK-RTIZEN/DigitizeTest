@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+
+    <title>DIGITIZE</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  </head>
+
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <!-- <div class="masthead clearfix">
+            <div class="inner">
+             <h3 class="masthead-brand">Cover</h3>
+             <nav class="nav nav-masthead">
+                <a class="nav-link active" href="#">Home</a>
+                <a class="nav-link" href="#">Features</a>
+                <a class="nav-link" href="#">Contact</a>
+              </nav>
+            </div>
+          </div>-->
+
+          <div class="inner cover">
+            <h1 class="cover-heading mt-4" style="color:#000">Bank of India</h1>
+            <p class="lead"><span style="color:#004d7f; font-size:25px;">D&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;&nbsp;G&nbsp;&nbsp;&nbsp;</span><span style="color:#73fDEA; font-size:25px;">I&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;</span><span style="color:#004d7f; font-size:25px;">I&nbsp;&nbsp;&nbsp;Z&nbsp;&nbsp;&nbsp;E</span></p>
+            <p class="lead" style="color:#8c8c8c; padding-left:65px; font-size:13px; font-weight:bold; font:Helvetica" align="left">R E V I E W&nbsp;&nbsp;&nbsp;I N F O R M A T I O N</p>
+           <div style="text-align:center; ">
+     
+            <span class="dot done" style="height:30px; width:30px"></span>
+            <span class="line done" style="height:6px; width:140px;" ></span>
+            <span class="dot done " style="height:30px; width:30px"></span>
+            <span class="line done" style="height:6px; width:140px;"></span>
+            <span class="dot done" style="height:30px; width:30px; z-index:1; position: relative;"></span>
+            <span class="line notdone" style="height:6px; width:140px;"></span>
+            <span class="dot notdone" style="height:30px; width:30px"></span>
+</div>
+            <ng-container *ngFor="let customer of loadedCustomerDetails">
+            <p class="lead" style="color:#889F60; padding-left:65px; font-size:14px" align="left"><strong>{{customer.acctName}}   >  {{customer.custName}}</strong></p>
+            
+            <div class="" style="border-radius:10px; display: flex;justify-content: center; margin-bottom:1px">
+               
+               
+               <ng-container *ngIf="errorRes2">
+                    <div>
+                      <p style="color: #000;">{{ errorRes2 }}</p>
+                    </div>
+               </ng-container>
+
+               <ng-container *ngIf="loadedDocumentsDetails.length >= 1" >
+               
+               
+               <table border="0" align="center" width="80%">
+                <tr valign="middle">
+               <td width="30%"><p class="lead" style="color:#000; padding-top:1px; padding-left:5px; font-size:13px " align="left">Name</p></td>
+                <td width="70%" ><p class="lead" style="color:#000; padding-top:1px; padding-left:5px; padding-left:20px; font-size:13px " align="right"><input type="text" id="ip1" value="{{loadedDocumentsDetails[0].Name}}" [style.background-color] = "loadedDocumentsDetails[0].color" /></p></td>
+               </tr>
+               <tr valign="middle">
+                  <td width="30%"><p class="lead" style="color:#000; padding-top:1px; padding-left:5px; font-size:13px " align="left">Street 1</p></td>
+                   <td width="70%"><p class="lead" style="color:#000; padding-top:1px; padding-left:5px; padding-left:20px;font-size:13px " align="right"><input type="text" id="ip1" value="{{loadedDocumentsDetails[1].Street1}}" [style.background-color] = "loadedDocumentsDetails[1].color" /></p></td>
+                  </tr>
+                  <tr valign="middle">
+                  <td width="30%"><p class="lead" style="color:#000; padding-top:1px; padding-left:5px; font-size:13px " align="left">City</p></td>
+                   <td width="70%"><p class="lead" style="color:#000; padding-top:1px; padding-left:5px; padding-left:20px; font-size:13px "  align="right"><input type="text" id="ip1" value="{{loadedDocumentsDetails[2].City}}" [style.background-color] = "loadedDocumentsDetails[2].color" /></p></td>
+                  </tr>
+                  <tr valign="middle">
+                  <td width="30%"><p class="lead" style="color:#000; padding-top:1px; padding-left:5px; font-size:13px " align="left">State</p></td>
+                   <td width="70%"><p class="lead" style="color:#000; padding-top:1px; padding-left:5px; font-size:13px; padding-left:20px; " align="right"><input type="text" id="ip1" value="{{loadedDocumentsDetails[3].State}}" [style.background-color] = "loadedDocumentsDetails[3].color" /></p></td>
+                  </tr>
+                  <tr valign="middle">
+                  <td width="30%"><p class="lead" style="color:#000; padding-top:1px; padding-left:5px; font-size:13px " align="left">Mobile Number</p></td>
+                   <td width="70%"><p class="lead" style="color:#000; padding-top:1px; padding-left:5px; font-size:13px; padding-left:20px; " align="right"><input type="text" id="ip1" value="{{loadedDocumentsDetails[4].MobileNo}}" [style.background-color] = "loadedDocumentsDetails[4].color" /></p></td>
+                  </tr>
+                  <tr valign="middle">
+                  <td width="30%"><p class="lead" style="color:#000; padding-top:1px; padding-left:5px; font-size:13px " align="left" >Fathers Name</p></td>
+                   <td width="70%"><p class="lead" style="color:#000; padding-top:1px; padding-left:5px; font-size:13px; padding-left:20px; " align="right"><input type="text" id="ip1" value="{{loadedDocumentsDetails[5].FatherName}}" [style.background-color] = "loadedDocumentsDetails[5].color" /></p></td>
+                  </tr>
+                  <tr valign="middle">
+                  <td width="30%"><p class="lead" style="color:#000; padding-top:1px; padding-left:5px; font-size:13px " align="left" >Branch</p></td>
+                   <td width="70%"><p class="lead" style="color:#000; padding-top:1px; padding-left:5px; font-size:13px; padding-left:20px; " align="right" ><input type="text" id="ip1" value="{{loadedDocumentsDetails[6].BranchName}}" [style.background-color] = "loadedDocumentsDetails[6].color" /></p></td>
+                  </tr>
+                  <tr valign="middle">
+                  <td width="30%"><p class="lead" style="color:#000; padding-top:1px; padding-left:5px; font-size:13px "  align="left" >Application Date</p></td>
+                   <td width="70%"><p class="lead" style="color:#000; padding-top:1px; padding-left:5px; font-size:13px; padding-left:20px; " align="right" ><input type="date" id="ip1" value="{{loadedDocumentsDetails[7].ApplicationDate}}" [style.background-color] = "loadedDocumentsDetails[7].color" disabled #applicationDate/><i type="button" class="fa fa-calendar-check-o " style="font-size:18px" aria-hidden="true" (click)="applicationDate.click()"></i></p></td>
+                  </tr>
+                  <tr valign="middle">
+                  <td width="30%"><p class="lead" style="color:#000; padding-top:1px; padding-left:5px; font-size:13px " align="left" >Customer ID</p></td>
+                   <td width="70%"><p class="lead" style="color:#000; padding-top:1px; padding-left:5px; font-size:13px; padding-left:20px; " align="right"><input type="text" id="ip1" value="{{loadedDocumentsDetails[8].CustomerID}}" [style.background-color] = "loadedDocumentsDetails[8].color" /></p></td>
+                  </tr>
+               </table>
+               
+               
+               </ng-container>
+               
+                </div>
+                
+                
+                
+             
+            <div align="center" class="">
+         
+           
+                
+             
+             <table  border="0" width="100%" class="mt-3" align="center">
+                <input type="hidden" id="acctId" name="acctId" value="{{customer.acctId}}" #acctId/>
+                <tr><td>
+            <button type="button" (click)="onClickBack(acctId.value)" class="btn btn-lg btn-secondary " style="border:none; width:125px; background-color:#C0C0C0; color:#FFF; font-stretch:normal; font-weight:400; height:20px; padding-top:12px; padding-bottom:24px; padding-left:15px; font-size:12px; font-weight:bold; text-align:center;  box-shadow: 2px 2px 0px 0px #b6b6b6;"><i class="fa fa-arrow-left round" style="background-color: #EBEBEB; border: none"></i><strong> B A C K</strong></button>
+             </td>
+             <td >
+            <a href="#" class="btn btn-lg btn-secondary" style="border:none; width:125px; background-color:#FF7E79; color:#FFF; font-stretch:normal; font-weight:400; height:20px; padding-top:12px; padding-bottom:25px; padding-left:15px; font-size:12px; font-weight:bold; text-align:center;  box-shadow: 2px 2px 0px 0px #b6b6b6;">CANCEL </a>
+             </td>
+            <td >
+            <a href="#" class="btn btn-lg btn-secondary" style="border:none; width:125px; background-color:#EBEBEB; color:#a1a1a1; font-stretch:normal; font-weight:400; height:20px; padding-top:12px; padding-bottom:25px; padding-left:15px; font-size:12px; font-weight:bold; text-align:center;  box-shadow: 2px 2px 0px 0px #b6b6b6; ">EXIT</a>
+             </td>
+             <td >
+            <button (click)="onClickNext(acctId.value)" class="btn btn-lg btn-secondary" style="border:none; width:125px; background-color:#00A2FF; color:#FFF; font-stretch:normal; font-weight:400; height:20px; padding-top:12px;  padding-bottom:25px; padding-left:15px; font-size:12px; font-weight:bold; text-align:center; box-shadow: 2px 2px 0px 0px #b6b6b6;"><strong> N E X T </strong><i class="fa fa-arrow-right round" style="background-color: #56C1FF; border: none"></i></button>
+             </td></tr></table>
+             
+             
+                </div>
+
+              </ng-container>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p></p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
+
+
